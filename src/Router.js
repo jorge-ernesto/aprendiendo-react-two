@@ -34,7 +34,7 @@ const PaginaPruebas = () => {
 
     return (
         <div id="content">
-            <h1>Pagina de pruebas</h1>
+            <h1>Acerca de nosotros</h1>
             <p>Nombre: {nombre}</p>
             {apellidos &&
                 <p>Apellidos: {apellidos}</p>
