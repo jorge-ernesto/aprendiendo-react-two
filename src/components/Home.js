@@ -9,7 +9,7 @@ class Home extends Component {
         return (
             <React.Fragment>
                 <Slider
-                    titulo="Bienvenido al Curso de React con Víctor Robles de victorroblesweb.es"
+                    titulo="Blog React - Todo lo que puedes hacer"
                     btn="Ir al blog"
                     size="slider-big"
                 />

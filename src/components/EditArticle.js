@@ -192,7 +192,7 @@ class EditArticle extends Component {
                                 <label htmlFor="title">Titulo</label>
                                 <input type="text" name="title" defaultValue={article.title} ref={this.titleRef} onChange={this.changeState} />
 
-                                {this.validator.message('title', this.state.article.title, 'required|alpha_num_space')}
+                                {this.validator.message('title', this.state.article.title, 'required')} {/* required|alpha_num_space */}
                             </div>
 
                             <div className="form-group">

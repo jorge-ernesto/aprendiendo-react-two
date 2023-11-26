@@ -8,7 +8,7 @@ class Peliculas extends Component {
 
     state = {
         peliculas: [
-            { titulo: 'Batman vs Superman', image: 'https://www.prensalibre.com/wp-content/uploads/2018/12/3561243c-6fdc-4fef-9d93-d10d21b1c1e6.jpg' },
+            { titulo: 'Batman vs Superman', image: 'https://www.comicverso.com/wp-content/uploads/2019/12/destacada-batmanvssuperman.jpg' },
             { titulo: 'Gran Torino', image: 'https://diariobasta.com/wp-content/uploads/2019/08/grantorino-708x350@2x.jpg' },
             { titulo: 'Looper', image: 'https://hbomax-images.warnermediacdn.com/images/GYGa0pQQsjlXCeQEAAADJ/tileburnedin?size=1280x720&partner=hbomaxcom&v=d382bcbdf506a575c597839d837afc9f&host=art-gallery.api.hbo.com&language=en-us&w=1280' }
         ],
