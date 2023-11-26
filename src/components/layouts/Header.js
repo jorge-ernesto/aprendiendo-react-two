@@ -12,7 +12,7 @@ class Header extends Component {
                     <div id="logo">
                         <img src={logo} className="app-logo" alt="Logotipo" />
                         <span id="brand">
-                            <strong>Curso</strong>React
+                            <strong>Blog</strong>React
                         </span>
                     </div>
 
@@ -26,16 +26,16 @@ class Header extends Component {
                                 <NavLink to="/blog">Blog</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/formulario">Formulario</NavLink>
+                                <NavLink to="/peliculas">Peliculas</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/peliculas">Peliculas</NavLink>
+                                <NavLink to="/formulario">Contacto</NavLink>
                             </li>
                             <li>
                                 {/* De este modo, con className y navData, podemos manipular el estilo, sin embargo si no pusieramos nada, */}
                                 {/* mostraria por defecto el estilo "active", como en los ejemplos de arriba */}
-                                <NavLink to="/pruebas/Ernesto/Si" className={(navData) => (navData.isActive ? "active" : 'none')}>
-                                    Pagina 2
+                                <NavLink to="/pruebas/Ernesto/Si" className={(navData) => (navData.isActive ? "active" : "none")}>
+                                    Acerca de nosotros
                                 </NavLink>
                             </li>
                         </ul>

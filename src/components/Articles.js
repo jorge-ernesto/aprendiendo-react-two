@@ -90,7 +90,7 @@ class Articles extends Component {
     }
 
     render() {
-        if (this.state.articles.length >= 1) {
+        if (this.state.articles && this.state.articles.length >= 1) {
 
             let listArticles = this.state.articles.map((article) => {
                 return (
@@ -120,7 +120,7 @@ class Articles extends Component {
                     {listArticles}
                 </div>
             )
-        } else if (this.state.articles.length === 0 && this.state.status === "success") {
+        } else if (this.state.articles && this.state.articles.length === 0 && this.state.status === "success") {
             return (
                 <div id="articles">
                     <h2 className="subheader">No hay articulos para mostrar</h2>

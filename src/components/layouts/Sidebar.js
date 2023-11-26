@@ -1,21 +1,22 @@
 import React, { Component } from 'react'
-import { Link, Navigate } from 'react-router-dom';
+import withRouter from './../withRouter'
+import { Navigate, Link } from 'react-router-dom';
 
 class Sidebar extends Component {
 
     searchRef = React.createRef();
 
     state = {
-        search: '',
-        redirect: false
+        redirect: false,
+        search: ''
     }
 
     redirectToSearch = (e) => {
         e.preventDefault()
 
         this.setState({
-            search: this.searchRef.current.value,
-            redirect: true
+            redirect: true,
+            search: this.searchRef.current.value
         })
     }
 
@@ -23,12 +24,19 @@ class Sidebar extends Component {
         // render siempre se esta comprobando continuamente
         // render siempre esta comprobando los cambios en el componente
         if (this.state.redirect) {
-            return (
-                // de este modo redirijo a un componente que no tiene el sidebar como parte de su renderizacion
-                // ya que eso generaria un bucle
-                <Navigate to={'/redirect/' + this.state.search} />
-            )
+            if (this.state.search === '') {
+                alert('Busqueda vacia');
+            } else {
+                return (
+                    // de este modo redirijo a un componente que no tiene el sidebar como parte de su renderizacion
+                    // ya que eso generaria un bucle
+                    <Navigate to={'/redirect/' + this.state.search} />
+                )
+            }
         }
+
+        // obtener parametros por url
+        let search = this.props.params.search;
 
         return (
             <aside id="sidebar">
@@ -43,7 +51,7 @@ class Sidebar extends Component {
                         <h3>Buscador</h3>
                         <p>Encuentra el artículo que buscas</p>
                         <form onSubmit={this.redirectToSearch}>
-                            <input type="text" name="search" ref={this.searchRef} />
+                            <input type="text" name="search" ref={this.searchRef} defaultValue={search} />
                             <input type="submit" name="submit" value="Buscar" className="btn" />
                         </form>
                 </div>
@@ -53,4 +61,4 @@ class Sidebar extends Component {
 
 }
 
-export default Sidebar
+export default withRouter(Sidebar)
