@@ -236,6 +236,7 @@ body {
 }
 
 input[type="text"],
+input[type="email"],
 textarea,
 input[type="file"]{
     width: 100%;
@@ -247,6 +248,7 @@ input[type="file"]{
 }
 
 input[type="text"]:focus,
+input[type="email"]:focus,
 textarea:focus,
 input[type="file"]:focus{
     box-shadow: 0px 0px 5px #eee inset;
@@ -336,6 +338,10 @@ input[type="submit"]{
 
 .article-item a:hover{
     text-decoration: underline;
+}
+
+.article-item button{
+    margin-top: 10px;
 }
 
 .subheader{
